@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crónicas de Eder: El Guerrero del Código</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-abyss: #0a0a0a;
+            --blood-moon: #6d0d0d;
+            --old-gold: #b89b3f;
+            --parchment-light: #f0e6d2;
+            --stone-gray: #242424;
+            --deep-purple: #2a1a3b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: var(--dark-abyss);
+            background-image: radial-gradient(circle, var(--deep-purple) 0%, var(--dark-abyss) 70%);
+            color: var(--parchment-light);
+            font-family: 'MedievalSharp', cursive;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ----- Barra lateral ----- */
+        .sidebar {
+            width: 280px;
+            background-color: rgba(10,10,10,0.9);
+            border-right: 3px solid var(--blood-moon);
+            padding: 2rem 1rem;
+            box-shadow: 0 0 20px rgba(109,13,13,0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .sidebar img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--old-gold);
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            animation: rotateAndPulse 8s linear infinite;
+        }
+
+        .sidebar h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--old-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .sidebar p, .sidebar li {
+            font-size: 1rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.8rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--blood-moon);
+            padding: 0.3rem 0.6rem;
+            margin: 0.2rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--parchment-light);
+            box-shadow: 0 0 10px rgba(109,13,13,0.6);
+        }
+
+        /* ----- Contenido principal ----- */
+        .main-content {
+            flex: 1;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(10, 10, 10, 0.85);
+            border: 3px solid var(--blood-moon);
+            box-shadow: 0 0 30px rgba(109, 13, 13, 0.7);
+            animation: fadeInScale 1.5s ease-out forwards;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--old-gold);
+            text-shadow: 0 0 15px rgba(184, 155, 63, 0.8);
+            text-align: center;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--blood-moon);
+            border-bottom: 2px dashed var(--old-gold);
+            padding-bottom: 0.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+        }
+
+        li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--blood-moon);
+        }
+
+        /* Animaciones */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px rgba(184,155,63,0.8); }
+            50% { text-shadow: 0 0 25px rgba(184,155,63,1), 0 0 35px rgba(184,155,63,0.7); }
+            100% { text-shadow: 0 0 10px rgba(184,155,63,0.8); }
+        }
+
+        @keyframes rotateAndPulse {
+            0% { transform: rotate(0deg) scale(1); box-shadow: 0 0 20px rgba(184,155,63,0.6); }
+            50% { transform: rotate(180deg) scale(1.05); box-shadow: 0 0 35px rgba(184,155,63,0.9); }
+            100% { transform: rotate(360deg) scale(1); box-shadow: 0 0 20px rgba(184,155,63,0.6); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+        <img src="https://i.pinimg.com/736x/78/29/9f/78299fbfa6eda6bfdb308214a6ece52f.jpg" alt="Foto de perfil">
+        <h2>Eder Rosadas</h2>
+        <p>19 años • Bucaramanga</p>
+        <h3>Contacto</h3>
+        <p>Tel: 3153347878<br>Email: ederrosadas1002@gmail.com</p>
+        <h3>Habilidades</h3>
+        <div>
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">C++</span>
+            <span class="tag">Bases de Datos</span>
+        </div>
+        <h3>Idiomas</h3>
+        <p>Español (Nativo)<br>Inglés (B1)<br>Portugues (Nativo)</p>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Crónicas de Eder: El Guerrero del Código</h1>
+
+            <h2>Perfil Profesional</h2>
+            <p>
+              Tengo 19 años y estoy estudiando Ingeniería de Software voy de cuarto semestre en la Universidad de Santander (UDES). Me apasiona la programación y tengo conocimientos en Python, Java y conceptos básicos de C++. También me interesa Kali Linux y el campo de la ciberseguridad.
+
+            </p>
+
+            <h2>Educación</h2>
+            <ul>
+                <li>Ingeniería de Software - Universidad de Santander (UDES) - 2024 - Presente</li>
+            </ul>
+
+            <h2>Intereses y Aventuras</h2>
+            <ul>
+                <li>Ciberseguridad y defensa digital</li>
+                <li>Desarrollo de videojuegos</li>
+                <li>Deportes extremos: surf, fútbol, natación, senderismo</li>
+            </ul>
+
+            <h2>Juegos Favoritos</h2>
+            <ul>
+                <li>CSGO</li>
+                <li>Rainbow Six Siege</li>
+                <li>GTA V</li>
+                <li>Call of Duty: Black Ops II</li>
+                <li>Left 4 Dead 2</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
